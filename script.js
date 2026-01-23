@@ -29,8 +29,9 @@ function play() {
     case move === "Paper" && move === rockButton:
       console.log(message.concat(" You lose!"));
       break;
-    default:
-      console.log(message.concat(" You Win!"));
+    //default:
+    //console.log(message.concat(" You Win!")); so far this is the only logic going through when the function is invoked (meaning the logic above either isn't linking to any specific buttons or it's invalid or both)
+    //break;
   }
   //if (move == userMove) {
   //console.log("Congratulations! You win!");
