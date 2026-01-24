@@ -16,17 +16,19 @@ console.log(scissorsButton.value);
 function play() {
   let move = options[computerMoves];
   let message = `Computer chose ${move}`;
-  switch (move) {
-    case move == rockButton.addEventListener("click"):
-    case move == paperButton.addEventListener("click"):
-    case move == scissorsButton.addEventListener("click"):
+  switch (
+    move //switch statements are strict equality checkers and its possible that the logic below could be better understood with a regular if else statement
+  ) {
+    case move == rockButton.value:
+    case move == paperButton.value:
+    case move == scissorsButton.value:
       console.log(
         `You and the computer guessed the same move: ${move}. Try again!`,
       );
       break;
-    case move == "Rock" && move === scissorsButton.addEventListener("click"):
-    case move == "Scissors" && move === paperButton.addEventListener("click"):
-    case move == "Paper" && move === rockButton.addEventListener("click"):
+    case move == "Rock" && move === scissorsButton.value: //the logic after && needs to relate to the user's move and this line refers to "move" which was declared as the computer's move
+    case move == "Scissors" && move === paperButton.value: //store the user's move in a different variable and use it after &&
+    case move == "Paper" && move === rockButton.value:
       console.log(message.concat(" You lose!"));
       break;
     //default:
