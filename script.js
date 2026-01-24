@@ -5,28 +5,28 @@ console.log(options[computerMoves]);
 
 let rockButton = document.getElementById("rock");
 //rockButton.addEventListener("click", console.log(`your move: ${option[0]}`)); attempted to make a button click output a message(ERROR)
-rockButton = options[0];
-console.log(rockButton);
+//rockButton = options[0];
+console.log(rockButton.value);
 let paperButton = document.getElementById("paper");
-paperButton = options[1];
-console.log(paperButton);
+//paperButton = options[1];
+console.log(paperButton.value);
 let scissorsButton = document.getElementById("scissors");
-scissorsButton = options[2];
-console.log(scissorsButton);
+//scissorsButton = options[2];
+console.log(scissorsButton.value);
 function play() {
   let move = options[computerMoves];
   let message = `Computer chose ${move}`;
   switch (move) {
-    case move === rockButton:
-    case move === paperButton:
-    case move === scissorsButton:
+    case move == rockButton.addEventListener("click"):
+    case move == paperButton.addEventListener("click"):
+    case move == scissorsButton.addEventListener("click"):
       console.log(
         `You and the computer guessed the same move: ${move}. Try again!`,
       );
       break;
-    case move === "Rock" && move === scissorsButton:
-    case move === "Scissors" && move === paperButton:
-    case move === "Paper" && move === rockButton:
+    case move == "Rock" && move === scissorsButton.addEventListener("click"):
+    case move == "Scissors" && move === paperButton.addEventListener("click"):
+    case move == "Paper" && move === rockButton.addEventListener("click"):
       console.log(message.concat(" You lose!"));
       break;
     //default:
