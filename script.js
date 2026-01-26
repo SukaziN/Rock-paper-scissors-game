@@ -17,7 +17,7 @@ let move = options[computerMoves];
 function play() {
   let message = `Computer chose ${move}`;
   if (
-    move == rockButton.value || //the conditional works but cannot differentiate between the buttons and is therefore assigning the same value("rock") to all of them
+    move == rockButton.value || //the conditional works but cannot differentiate between the buttons and is therefore assigning the same value("paper") to all of them
     move == paperButton.value ||
     move == scissorsButton.value
   ) {
