@@ -2,6 +2,7 @@ let options = ["Rock", "Paper", "Scissors"];
 let computerMoves = Math.floor(Math.random() * 3);
 console.log(computerMoves);
 console.log(options[computerMoves]);
+let move = options[computerMoves];
 
 let rockButton = document.getElementById("rock");
 //rockButton.addEventListener("click", console.log(`your move: ${option[0]}`)); attempted to make a button click output a message(ERROR)
@@ -11,7 +12,6 @@ let paperButton = document.getElementById("paper");
 
 let scissorsButton = document.getElementById("scissors");
 
-let move = options[computerMoves];
 let userMoveRock = rockButton.value;
 console.log(userMoveRock);
 let userMovePaper = paperButton.value;
@@ -53,6 +53,8 @@ function playScissors() {
     console.log(message.concat(" You Win!"));
   }
 } //OK so now the separate functions helped differentiate which button was clicked but the only valid conditional is the if block coz the functions only respond when the computer move is the same as the userMove
+//Noticing that the error message targets the specific line of code it should be running in case of the clicked button versus the computer's move (i.e, it is correctly identifying the outcome (win or lose) but does not log it)
+
 /*function play() {
   let message = `Computer chose ${move}`;
   if (
