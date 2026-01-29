@@ -19,7 +19,41 @@ console.log(userMovePaper);
 let userMoveScissors = scissorsButton.value;
 console.log(userMoveScissors);
 
-function play() {
+function playRock() {
+  if (move == userMoveRock) {
+    console.log(
+      `You and the computer guessed the same move: ${move}. Try again!`,
+    );
+  } else if (move == "Paper" && userMoveRock) {
+    console.log(message.concat(" You lose!"));
+  } else {
+    console.log(message.concat(" You Win!"));
+  }
+}
+
+function playPaper() {
+  if (move == userMovePaper) {
+    console.log(
+      `You and the computer guessed the same move: ${move}. Try again!`,
+    );
+  } else if (move == "Scissors" && userMovePaper) {
+    console.log(message.concat(" You lose!"));
+  } else {
+    console.log(message.concat(" You Win!"));
+  }
+}
+function playScissors() {
+  if (move == userMoveScissors) {
+    console.log(
+      `You and the computer guessed the same move: ${move}. Try again!`,
+    );
+  } else if (move == "Rock" && userMoveScissors) {
+    console.log(message.concat(" You lose!"));
+  } else {
+    console.log(message.concat(" You Win!"));
+  }
+}
+/*function play() {
   let message = `Computer chose ${move}`;
   if (
     move == userMoveRock || //the conditional works but cannot differentiate between the buttons and is therefore assigning the same value("paper") to all of them
@@ -38,7 +72,7 @@ function play() {
   } else {
     console.log(message.concat(" You Win!"));
   }
-}
+} */
 //if (move == userMove) {
 //console.log("Congratulations! You win!");
 // }
