@@ -19,15 +19,20 @@ console.log(userMovePaper);
 let userMoveScissors = scissorsButton.value;
 console.log(userMoveScissors);
 let message = `Computer chose ${move}`;
+let outcome = document.getElementById("outcome");
+
 function playRock() {
   if (move == userMoveRock) {
     console.log(
       `You and the computer guessed the same move: ${move}. Try again!`,
     );
+    outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
   } else if (move == "Paper" && userMoveRock) {
-    console.log(message.concat(" You lose!"));
+    console.log(message.concat(" You lose!😞"));
+    outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!"));
+    console.log(message.concat(" You Win!🎆🎊🎉"));
+    outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 }
 
@@ -36,10 +41,13 @@ function playPaper() {
     console.log(
       `You and the computer guessed the same move: ${move}. Try again!`,
     );
+    outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
   } else if (move == "Scissors" && userMovePaper) {
-    console.log(message.concat(" You lose!"));
+    console.log(message.concat(" You lose!😞"));
+    outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!"));
+    console.log(message.concat(" You Win!🎆🎊🎉"));
+    outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 }
 function playScissors() {
@@ -47,10 +55,13 @@ function playScissors() {
     console.log(
       `You and the computer guessed the same move: ${move}. Try again!`,
     );
+    outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
   } else if (move == "Rock" && userMoveScissors) {
-    console.log(message.concat(" You lose!"));
+    console.log(message.concat(" You lose!😞"));
+    outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!"));
+    console.log(message.concat(" You Win!🎆🎊🎉"));
+    outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 } //OK so now the separate functions helped differentiate which button was clicked but the only valid conditional is the if block coz the functions only respond when the computer move is the same as the userMove
 //Noticing that the error message targets the specific line of code it should be running in case of the clicked button versus the computer's move (i.e, it is correctly identifying the outcome (win or lose) but does not log it)
