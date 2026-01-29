@@ -52,7 +52,7 @@ function playScissors() {
   } else {
     console.log(message.concat(" You Win!"));
   }
-}
+} //OK so now the separate functions helped differentiate which button was clicked but the only valid conditional is the if block coz the functions only respond when the computer move is the same as the userMove
 /*function play() {
   let message = `Computer chose ${move}`;
   if (
