@@ -18,7 +18,7 @@ let userMovePaper = paperButton.value;
 console.log(userMovePaper);
 let userMoveScissors = scissorsButton.value;
 console.log(userMoveScissors);
-
+let message = `Computer chose ${move}`;
 function playRock() {
   if (move == userMoveRock) {
     console.log(
@@ -54,9 +54,10 @@ function playScissors() {
   }
 } //OK so now the separate functions helped differentiate which button was clicked but the only valid conditional is the if block coz the functions only respond when the computer move is the same as the userMove
 //Noticing that the error message targets the specific line of code it should be running in case of the clicked button versus the computer's move (i.e, it is correctly identifying the outcome (win or lose) but does not log it)
+//crisis averted! turns out the the message was still stuck in the old function I commented out and was not globally accessible
 
 /*function play() {
-  let message = `Computer chose ${move}`;
+ 
   if (
     move == userMoveRock || //the conditional works but cannot differentiate between the buttons and is therefore assigning the same value("paper") to all of them
     move == userMovePaper ||
