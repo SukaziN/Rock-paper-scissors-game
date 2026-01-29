@@ -1,0 +1,36 @@
+:root {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 500px;
+  text-align: center;
+  background-color: blanchedalmond;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+em {
+  background-color: rgba(247, 198, 126, 0.983);
+}
+button {
+  margin-right: 10px;
+  background-color: rgb(15, 108, 247);
+  color: white;
+  height: 50px;
+  font-size: larger;
+  border: none;
+  border-radius: 10%;
+}
+
+button:hover {
+  background-color: blue;
+}
