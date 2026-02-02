@@ -1,66 +1,44 @@
 let options = ["Rock", "Paper", "Scissors"];
 let computerMoves = Math.floor(Math.random() * 3);
-console.log(computerMoves);
-console.log(options[computerMoves]);
 let move = options[computerMoves];
 
 let rockButton = document.getElementById("rock");
-//rockButton.addEventListener("click", console.log(`your move: ${option[0]}`)); attempted to make a button click output a message(ERROR)
-//rockButton = options[0];
 
 let paperButton = document.getElementById("paper");
 
 let scissorsButton = document.getElementById("scissors");
 
 let userMoveRock = rockButton.value;
-console.log(userMoveRock);
 let userMovePaper = paperButton.value;
-console.log(userMovePaper);
 let userMoveScissors = scissorsButton.value;
-console.log(userMoveScissors);
 let message = `Computer chose ${move}`;
 let outcome = document.getElementById("outcome");
 
 function playRock() {
   if (move == userMoveRock) {
-    console.log(
-      `You and the computer guessed the same move: ${move}. Try again!`,
-    );
-    outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
+    outcome.innerHTML = `You and the computer guessed the same move: ${move}. It's a tie!`;
   } else if (move == "Paper" && userMoveRock) {
-    console.log(message.concat(" You lose!😞"));
     outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!🎆🎊🎉"));
     outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 }
 
 function playPaper() {
   if (move == userMovePaper) {
-    console.log(
-      `You and the computer guessed the same move: ${move}. Try again!`,
-    );
     outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
   } else if (move == "Scissors" && userMovePaper) {
-    console.log(message.concat(" You lose!😞"));
     outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!🎆🎊🎉"));
     outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 }
 function playScissors() {
   if (move == userMoveScissors) {
-    console.log(
-      `You and the computer guessed the same move: ${move}. Try again!`,
-    );
     outcome.innerHTML = `You and the computer guessed the same move: ${move}. Try again!`;
   } else if (move == "Rock" && userMoveScissors) {
-    console.log(message.concat(" You lose!😞"));
     outcome.innerHTML = message.concat(" You lose!😞");
   } else {
-    console.log(message.concat(" You Win!🎆🎊🎉"));
     outcome.innerHTML = message.concat(" You Win!🎆🎊🎉");
   }
 } //OK so now the separate functions helped differentiate which button was clicked but the only valid conditional is the if block coz the functions only respond when the computer move is the same as the userMove
